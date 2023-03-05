@@ -20,10 +20,10 @@ deploy:
   provider: elasticbeanstalk
   access_key_id: $ACCESSKEYID
   secret_access_key: $SECRETACCESSKEY
-  region: "$REGION"  
+  region: "us-west-2"  
   app: "django_tutorial_rs8117"
   env: "tutorial-django-env"
-  bucket_name: ""
+  bucket_name: "elasticbeanstalk-us-west-2-863036555906"
   on:
       repo: ramanarayanan-98/swe1-app
       branch: main
