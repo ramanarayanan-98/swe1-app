@@ -1,0 +1,29 @@
+language: python
+python:  
+  - "3.7"
+  
+install:
+  - pip install -r requirements.txt
+  
+before_script:
+  - python manage.py migrate
+  
+script:
+  - black --check .
+  - flake8 .
+  - coverage run --source="." manage.py test
+  
+after_script:
+   - coveralls
+
+deploy:
+  provider: elasticbeanstalk
+  access_key_id: $ACCESSKEYID
+  secret_access_key: $SECRETACCESSKEY
+  region: "$REGION"  
+  app: "django_tutorial_rs8117"
+  env: "tutorial-django-env"
+  bucket_name: ""
+  on:
+      repo: ramanarayanan-98/swe1-app
+      branch: main
