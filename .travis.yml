@@ -18,9 +18,9 @@ deploy:
   secret_access_key:
     secure: ESK37T4tRH97cpd7k8W7UyiGybd7zvn/xSkKdUQVq4rx6I+gIyFnJN6KI3/nBb0pd47YyFXgOh4NGzGtN9WWxcSXux0M5T+4C9Cpm6/H6WOM2FOQzF8/WB9ziX4hhoN6h/vmQn9yPIZ3SbUofQDxi/1LStB1h3VQyW8bn3hSmRrvGyoTaNDvpSBQMoKgT3cHR3yz4+SyKaNWjiUH9+SECkrSJeMhEQeT64pb+qqXeoBsxmN1bMYzlCfmlIImSxd48ynFB4cQYdZDkR62xBMRa9dyDDwNfHSWtByLeHsj0f+6UGHqorVjQ4S1HClaFQ5CmmeFzsUkCXuCs1TzevmEYlBi3n+slFcGOv6lE0KmLFixHTm7mzbFds7NfbzeOW35Hk0SQUwCyOHRNPR/IHcegWGhFf7WZakctfnbEuwwrAEvBQvPyqjbAHxw3O/Z08CjfJWIxvASE2NhHR0JGVvEUOqNg8ioy0YE0IndNfFTFOD2Bb3nk8FQa5qxtypgspA9yipfLu8ZxjRh9gAmixIahxcsMhvESGxvqlyIc2weonQXlL8nFAYHVh4enGnIxJOEoLklGantWRR2bf0lyZW2k/hl5wR6+nV/5uTB94k0Wz8QvHkVldWVS5esBYX+u9KvkDwujx/r/mSldg4jZymkKzOXV2UVsd+i/qQM7w4yZB4=
   region: "us-west-2"
-  app: django_tutorial_rs8117
-  env: tutorial-django-env
-  bucket_name: elasticbeanstalk-us-west-2-863036555906
+  app: "django_tutorial_rs8117"
+  env: "tutorial-django-env"
+  bucket_name: "elasticbeanstalk-us-west-2-863036555906"
   on:
     repo: ramanarayanan-98/swe1-app
     branch: main
