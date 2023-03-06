@@ -42,5 +42,6 @@ def vote(request, question_id):
     else:
         selected_choice.votes += 1
         selected_choice.save()
+        print("This is a very long print statementThis is a very long print statementThis is a very long print statementThis is a very long print statementThis is a very long print statementThis is a very long print statementThis is a very long print statementThis is a very long print statementThis is a very long print statementThis is a very long print statementThis is a very long print statementThis is a very long print statementThis is a very long print statementThis is a very long print statementThis is a very long print statementThis is a very long print statementThis is a very long print statementThis is a very long print statementThis is a very long print statementThis is a very long print statementThis is a very long print statementThis is a very long print statementThis is a very long print statementThis is a very long print statement")
 
         return HttpResponseRedirect(reverse("polls:results", args=(question.id,)))
