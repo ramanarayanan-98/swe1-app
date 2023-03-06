@@ -1,29 +1,26 @@
 language: python
-python:  
-  - "3.7"
-  
+python:
+- '3.7'
 install:
-  - pip install -r requirements.txt
-  
+- pip install -r requirements.txt
 before_script:
-  - python manage.py migrate
-  
+- python manage.py migrate
 script:
-  - black .
-  - flake8 .
-  - coverage run --source="." manage.py test
-  
+- black .
+- flake8 .
+- coverage run --source="." manage.py test
 after_script:
-   - coveralls
-
+- coveralls
 deploy:
   provider: elasticbeanstalk
-  access_key_id: $ACCESS_KEY
-  secret_access_key: $SECRET_ACCESS_KEY
-  region: $AWS_REGION 
-  app: "django_tutorial_rs8117"
-  env: "tutorial-django-env"
-  bucket_name: "elasticbeanstalk-us-west-2-863036555906"
+  access_key_id: 
+    secure: VYEKAEqgIbfoZOq1ilPTg3Q2NjfjgOIgACRr507vv7v9iyFEmHkkUkaRCOqmPZuabvkCdYzUQ6JL0jDbMMjzLsw/ypagK7J7YPAZHxsnV+04ZEQTy9glYd/Hw8mE4iKKv0PYH3KBYRJ4Xj7DGYuZlofMH+n1oP6T+Zzh/4RXK/UvOT/EnwhvnmCWoifCgMsunisi5mGlbNUVXWsXTtDI/9DxhnfY5DwcfrbeGYijOgiE4D4PosaDwr7xoi42F/vvOMmTPPcltjbEAwItiF9gBxTlGTZwZsyT6lC10ToD/rKfc1UG9kNC2wc2P3reSqfku60QJsmmSKpqAQibfzjFexDElfCpH588yC0HLl8eJTGbJpaZt7q0lCnZO3iK7BqNsby69qtsYsVSV5U1ZTq+Pi+LpGDGONlg4SiT6/aHbzBZsgc94G11Hgo8yc0yRaNuUvdEphN1PkSzKzrczhqDcwKWylTInQKiLGuMc7ev569DaNy08/Ggz96zBbK9UPAta9wOQ9zVPaCBDs6eeP65wLKbBKPvU+sHmtBlpF+nujY3wGykj/eIXOIgxoL9tR32qckAHv5D23Pxgn7i5UT2IQ2XTaizQlJC8ntG4w3iY7AetXtdtUqXrCu29Bt+K69zcKOaC+7cheBy8iDbKYmk9u3GUJxaXevfnBq6S6beYSs=
+  secret_access_key:
+    secure: ESK37T4tRH97cpd7k8W7UyiGybd7zvn/xSkKdUQVq4rx6I+gIyFnJN6KI3/nBb0pd47YyFXgOh4NGzGtN9WWxcSXux0M5T+4C9Cpm6/H6WOM2FOQzF8/WB9ziX4hhoN6h/vmQn9yPIZ3SbUofQDxi/1LStB1h3VQyW8bn3hSmRrvGyoTaNDvpSBQMoKgT3cHR3yz4+SyKaNWjiUH9+SECkrSJeMhEQeT64pb+qqXeoBsxmN1bMYzlCfmlIImSxd48ynFB4cQYdZDkR62xBMRa9dyDDwNfHSWtByLeHsj0f+6UGHqorVjQ4S1HClaFQ5CmmeFzsUkCXuCs1TzevmEYlBi3n+slFcGOv6lE0KmLFixHTm7mzbFds7NfbzeOW35Hk0SQUwCyOHRNPR/IHcegWGhFf7WZakctfnbEuwwrAEvBQvPyqjbAHxw3O/Z08CjfJWIxvASE2NhHR0JGVvEUOqNg8ioy0YE0IndNfFTFOD2Bb3nk8FQa5qxtypgspA9yipfLu8ZxjRh9gAmixIahxcsMhvESGxvqlyIc2weonQXlL8nFAYHVh4enGnIxJOEoLklGantWRR2bf0lyZW2k/hl5wR6+nV/5uTB94k0Wz8QvHkVldWVS5esBYX+u9KvkDwujx/r/mSldg4jZymkKzOXV2UVsd+i/qQM7w4yZB4=
+  region: "us-west-2"
+  app: django_tutorial_rs8117
+  env: tutorial-django-env
+  bucket_name: elasticbeanstalk-us-west-2-863036555906
   on:
-      repo: ramanarayanan-98/swe1-app
-      branch: main
+    repo: ramanarayanan-98/swe1-app
+    branch: main
