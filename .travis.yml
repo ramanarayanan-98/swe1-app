@@ -20,7 +20,7 @@ deploy:
   region: "us-west-2"
   app: "django_tutorial_rs8117"
   env: "django-tutorial-env"
-  bucket_name: "elasticbeanstalk-us-east-1-863036555906"
+  bucket_name: "django-tutorial-env.eba-bntbdim4.us-east-1.elasticbeanstalk.com"
   on:
     repo: ramanarayanan-98/swe1-app
     branch: main
