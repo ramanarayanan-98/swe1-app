@@ -1,1 +1,1 @@
-Deployed in AWS EB at : http://tutorial-django-env.eba-suzz2cbp.us-west-2.elasticbeanstalk.com/polls
+Deployed in AWS EB at : http://django-tutorial-env.eba-bntbdim4.us-east-1.elasticbeanstalk.com/polls
